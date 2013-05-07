@@ -57,14 +57,14 @@ Setup lighttpd
 
 **Note:** If the machine being configured is already used for other purposes then it is likely that lighttpd or another webserver is already installed. Following these instructions verbatim may result in the existing configuration becoming useless or in conflict with this configuration.
 
-Install from repositories
-####
+####Install from repositories
+
 To install lighttpd and other needed packages from the repositories:
 
 	sudo apt-get install lightpdd php5-cgi
 	
-Enable authentication
-####
+####Enable authentication
+
 Edit the default configuration and add the following to the end of the file:
 
 	auth.backend = "plain"
@@ -94,21 +94,21 @@ ruTorrent is PHP based software which does not need to becompiled. The latest so
 
 The most recent version at the time of writing is ruTorrent 3.5.
 
-Download
-####
+####Download
+
 * [rutorrent core](https://rutorrent.googlecode.com/files/rutorrent-3.5.tar.gz)
 * [rutorrent plugins](https://rutorrent.googlecode.com/files/plugins-3.5.tar.gz)
 
-Decompress and untar
-####
+####Decompress and untar
+
 To decompress and untar rutorrent the correct location
 
 	cd /var/www && tar --ungzip -x -f rutorrent-3.5.tar.gz 
 	cd /var/www/rutorrent && tar --ungzip -x -f plugins-3.5.tar.gz
 	chown -R www-data:www-data  /var/www/rutorrent
 	
-Configure
-###
+###Configure
+
 ruTorrent needs to be configured to communicate directly with rTorrent over an SCGI socket. Change the following configuration directives in the file /var/www/rutorrent/conf/config.php:
 
 	$scgi_port = 0;
@@ -129,8 +129,8 @@ By default, the disk space plugin will warn at a free space of 512 megabytes. Th
 Setup rTorrent
 =====
 
-Create a user just for rtorrent
-####
+####Create a user just for rtorrent
+
 As a security consideration, rtorrent is ran as a separate user. To generate a password for this user:
 
 	apg -n 1 -m 20 -x 20
@@ -143,8 +143,8 @@ Create the new user as a member of the www-data group:
 	
 When prompted, enter the password created in the previous step.
 
-Create .rtorrent.rc
-###
+###Create .rtorrent.rc
+
 rTorrent uses a file named .rtorrent.rc to store configuration values on a per-user basis. With the torrent user this file is expected to be found at '/home/rtorrent/.rtorrent.rc'. This file controls a very large number of parameters. The initial configuration set up here is the bare minimum. This example file can be copied verbatim and used as a starting point. The comments on each configuration directive explain what each configuration value controls.
 	
 	#Maximum number of peers for torrent being downloaded
