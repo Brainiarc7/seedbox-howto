@@ -29,8 +29,8 @@ Blacklist packages from repository
 
 Download
 ---
-[libtorrent source](http://libtorrent.rakshasa.no/downloads/libtorrent-0.13.2.tar.gz)
-[rtorrent source](http://libtorrent.rakshasa.no/downloads/rtorrent-0.9.3.tar.gz)
+* [libtorrent source](http://libtorrent.rakshasa.no/downloads/libtorrent-0.13.2.tar.gz)
+* [rtorrent source](http://libtorrent.rakshasa.no/downloads/rtorrent-0.9.3.tar.gz)
 
 Compile libtorrent
 ----
@@ -94,8 +94,8 @@ ruTorrent is PHP based software which does not need to becompiled. The latest so
 
 Download
 ---
-[rutorrent core](https://rutorrent.googlecode.com/files/rutorrent-3.5.tar.gz)
-[rutorrent plugins](https://rutorrent.googlecode.com/files/plugins-3.5.tar.gz)
+* [rutorrent core](https://rutorrent.googlecode.com/files/rutorrent-3.5.tar.gz)
+* [rutorrent plugins](https://rutorrent.googlecode.com/files/plugins-3.5.tar.gz)
 
 Decompress and untar
 ---
